@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<nav class="nav">
+    <ul>
+        <li class="nav-item">
+            <a href="header" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<header>
+    <section class="nameplate">
+        <div class="nameplate-content">
+            <h1 class="nameplate-title">{{ site.title }}</h1>
+            <h2 class="nameplate-subtitle">{{ site.tagline }}</h2>
+        </div>
+    </section>
+</header>
+
+<main>
+    {{ content }}
+</main>

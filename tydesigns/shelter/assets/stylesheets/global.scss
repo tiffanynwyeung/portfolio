@@ -1,0 +1,38 @@
+---
+# global.scss: global stylesheet.
+---
+
+// CORE SETTINGS
+@import 'base/normalize';
+
+@import 'base/colors';
+@import 'base/typography/definitions';
+@import 'base/z-index';
+@import 'base/settings/variables';
+@import 'base/settings/mixins';
+
+// BASELINE
+@import 'base/foundation';
+@import 'base/typography/typography';
+@import 'base/typography/icons';
+
+@import 'base/layouts/default';
+@import 'base/layouts/landing';
+
+// MODULES
+@import 'modules/animations/settings/mixins';
+@import 'modules/animations/settings/keyframes';
+@import 'modules/animations/settings/extends';
+
+@import 'modules/footer';
+@import 'modules/navigation';
+@import 'modules/nameplate';
+@import 'modules/grid';
+@import 'modules/portfolio';
+
+// SECTIONS
+@import 'sections/about';
+@import 'sections/portfolio';
+
+// ANIMATIONS
+@import 'modules/animations/landing';

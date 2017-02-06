@@ -1,0 +1,44 @@
+# ===
+# Configuration
+# ===
+
+
+# Dependencies
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+
+# Site Info
+title: Grace Ning
+description: I'm Grace Ning, a software developer and freelance artist with a passion for programming and art.
+
+keywords: grace,ning,software,developer,hire,freelance,development,dev,portfolio,linkedin,github,illustration,graphic,creative,art,visual,university,waterloo,uwaterloo,electrical,engineering,computer,software
+
+url: http://www.gracening.me
+baseurl: ""
+
+
+# Site Content
+logo: assets/img/favicon.png
+tagline: 'Software Developer & Freelance Artist'
+
+
+# Assets
+sass:
+  sass_dir: assets/stylesheets/_scss
+  style: :expanded
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+
+# Other
+username: gracening

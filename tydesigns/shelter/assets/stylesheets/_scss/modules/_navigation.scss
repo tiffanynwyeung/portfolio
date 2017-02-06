@@ -1,0 +1,64 @@
+//
+// modules/navigation: default site navigation.
+//
+
+.nav {
+    width: 100%;
+    height: 4em;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    background: center/cover fixed no-repeat url($header-img);
+    z-index: z('second-topmost');
+
+    @media all and (min-width: $tablet-size) {
+        height: 6em;
+    }
+
+    ul {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: z('topmost');
+        @include linear-gradient(color('black'), rgba(0,0,0,0.1));
+        list-style: none;
+        text-align: center;
+
+        @media all and (min-width: $tablet-size) {
+            text-align: right;
+        }
+    }
+
+    &-item {
+        width: auto;
+        height: auto;
+        display: inline-block;
+    }
+
+    &-link {
+        width: auto;
+        height: 1em;
+        padding: 1.5em 0.25em;
+        margin: 0;
+        display: inline-block;
+        background: transparent;
+        font-size: $default-font-size;
+        font-family: $body-font;
+        line-height: $default-lh;
+        color: color('white', 'silver');
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover, &:focus, &:active {
+            background: rgba(0,0,0,0.25);
+            color: color('white');
+        }
+
+        @media all and (min-width: $tablet-size) {
+            padding: 1.5em;
+            font-size: $heading-5;
+        }
+    }
+}

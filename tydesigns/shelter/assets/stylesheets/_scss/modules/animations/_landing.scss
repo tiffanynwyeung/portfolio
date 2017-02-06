@@ -1,0 +1,10 @@
+//
+// modules/animations/landing: landing animations.
+//
+
+.nameplate {
+    will-change: transform;
+    @include transform(translateZ(0));
+    @include animation-delay(400ms);
+    @extend %animationfadein--left;
+}

@@ -1,0 +1,25 @@
+// ===
+// modules/animations/settings/extends: all reusable animation styles.
+// ===
+
+
+%animation-settings {
+    @include animation-fill-mode(forwards);
+    @include animation-timing-function(cubic-bezier(0, 0.125, 0.625, 0.875));
+    @include animation-iteration-count(1);
+    @include animation-play-state(running);
+}
+
+%animation--fadein {
+    opacity: 0;
+    @include animation-duration(625ms);
+    @extend %animation-settings;
+}
+
+%animationfadein {
+
+    &--left {
+        @extend %animation--fadein;
+        @include animation-name(fade-in-left);
+    }
+}

@@ -1,0 +1,16 @@
+// ===
+// modules/animations/settings/keyframes: all animation keyframes.
+// ===
+
+
+@include keyframes(fade-in-left) {
+    0% {
+        opacity: 0;
+        @include transform(translateX(-1.75em));
+    }
+
+    100% {
+        opacity: 1;
+        @include transform(translateX(0));
+    }
+}

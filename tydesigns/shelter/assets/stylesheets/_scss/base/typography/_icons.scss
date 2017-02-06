@@ -1,0 +1,16 @@
+//
+// base/typography/icons: standard icon styles.
+//
+
+.icon {
+
+    &--media {
+        display: inline-block;
+        font-size: $heading-3;
+        line-height: $default-lh;
+
+        @media all and (min-width: $tablet-size) {
+            font-size: $heading-1;
+        }
+    }
+}

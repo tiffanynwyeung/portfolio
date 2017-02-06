@@ -1,0 +1,23 @@
+//
+// sections/about: specific overrides for the about section.
+//
+
+#about {
+
+    &-img {
+        width: 10em;
+        height: 10em;
+        display: block;
+        margin: 0 auto;
+
+        @media all and (min-width: $lg-mobile-width) {
+            margin: 0 2.5% 2.5% 0;
+            float: left;
+        }
+
+        @media all and (min-width: $tablet-size) {
+            width: 12.5em;
+            height: 12.5em;
+        }
+    }
+}

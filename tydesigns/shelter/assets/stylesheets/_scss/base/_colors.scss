@@ -1,0 +1,41 @@
+//
+// base/colors: default site color palette.
+//
+
+$color-variant: 'base' !default;
+
+$color-palette: (
+    'pink': (
+        'base': #f58f8f,
+    ),
+    'orange': (
+        'base': #ff9b21,
+        'light': #ffcf9a,
+    ),
+    'blue': (
+        'base': #252145,
+    ),
+    'black': (
+        'base': #000,
+    ),
+    'white': (
+        'gray': #dfdfdf,
+        'silver': rgba(255,255,255,0.75),
+        'base': rgba(255,255,255,0.9375),
+    )
+);
+
+
+@function color($name, $variant: $color-variant) {
+
+    $color-spectrum: if(map-has-key($color-palette, $name), map-get($color-palette, $name), null);
+
+    @if $color-spectrum {
+        @if map-has-key($color-spectrum, $variant) {
+            @return map-get($color-spectrum, $variant);
+        }
+    }
+
+    @warn "Unknown `#{$name}/#{$variant}` in the color palette.";
+    @return null;
+}

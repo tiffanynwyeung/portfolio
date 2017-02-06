@@ -1,0 +1,51 @@
+// ===
+// base/settings/mixins: all compressed and reusable styles.
+// ===
+
+
+@mixin vmargin-absolute($vmargin: 0, $center: true) {
+    margin: $vmargin auto;
+    position: absolute;
+
+    @if $center == true {
+        left: 0;
+        right: 0;
+    }
+}
+
+@mixin vmargin-relative($vmargin: 0) {
+    margin: $vmargin auto;
+    position: relative;
+}
+
+@mixin align-uppercase($alignment: center) {
+    text-align: $alignment;
+    text-transform: uppercase;
+}
+
+@mixin align-lowercase($alignment: center) {
+    text-align: $alignment;
+    text-transform: lowercase;
+}
+
+
+@mixin linear-gradient($gradient...) {
+    background: -webkit-linear-gradient($gradient);
+    background: -moz-linear-gradient($gradient);
+    background: -o-linear-gradient($gradient);
+    background: linear-gradient($gradient);
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}

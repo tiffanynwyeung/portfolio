@@ -1,0 +1,48 @@
+//
+// modules/nameplate: default nameplate styling.
+//
+
+.nameplate {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 0 5% 2.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &-content {
+        position: relative;
+    }
+
+    &-title {
+        padding: 0;
+        font-style: italic;
+        font-size: $heading-3;
+        line-height: $lh-2;
+        letter-spacing: -0.0375em;
+
+        @media all and (min-width: $tablet-size) {
+            font-size: $heading-1;
+        }
+
+        @media all and (min-width: $sm-desktop-width) {
+            font-size: $logo-size;
+        }
+    }
+
+    &-subtitle {
+        width: 100%;
+        margin: 0;
+        font-style: italic;
+        font-size: $heading-4;
+        line-height: $default-lh;
+        letter-spacing: -0.0375em;
+        color: color('blue');
+
+        @media all and (min-width: $tablet-size) {
+            padding-left: 0.25em;
+            font-size: $heading-3;
+        }
+    }
+}

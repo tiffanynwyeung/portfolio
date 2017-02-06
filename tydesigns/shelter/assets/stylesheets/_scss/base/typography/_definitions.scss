@@ -1,0 +1,37 @@
+// ===
+// base/typography/definitions: various typography definitions.
+// ===
+
+
+// FAMILIES
+$body-font: 'Arimo', 'Helvetica', 'Arial', sans-serif;
+$title-font: 'Didact Gothic', $body-font;
+
+
+// SIZES
+$default-font-size: 100%;                       // 16px
+
+$lg-font-size: $default-font-size * 1.25;       // 125%/20px
+$md-font-size: $default-font-size * 1.125;      // 112.5%/18px
+$sm-font-size: $default-font-size * 0.9375;     // 93.75%/15px
+
+$logo-size: $default-font-size * 5;             // 500%/80px
+$heading-1: $default-font-size * 4;             // 400%/64px
+$heading-2: $default-font-size * 3;             // 300%/48px
+$heading-3: $default-font-size * 2.5;           // 250%/40px
+$heading-4: $default-font-size * 2;             // 200%/32px
+$heading-5: $default-font-size * 1.5;           // 150%/24px
+
+
+// SPACING
+$default-lh: 100%;
+$body-lh: $default-lh * 1.625;                  // 162.5%
+
+$lh-1: $default-lh * 1.5;                       // 150%
+$lh-2: $default-lh * 1.25;                      // 125%
+$lh-3: $default-lh * 1.1;                       // 110%
+
+
+// WEIGHTS
+$regular: 400;
+$bold: 700;

@@ -1,0 +1,19 @@
+//
+// sections/portfolio: specific overrides for the portfolio section.
+//
+
+#view-more {
+    width: auto;
+    height: auto;
+    padding: 1em;
+    position: absolute;
+    right: 1em;
+    font-family: $body-font;
+    font-size: $md-font-size;
+    line-height: $default-lh;
+    text-transform: capitalize;
+
+    @media all and (min-width: $tablet-size) {
+        font-size: $heading-5;
+    }
+}
