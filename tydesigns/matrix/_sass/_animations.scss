@@ -1,0 +1,88 @@
+/// =====
+/// animations
+/// @for animations
+/// =====
+
+$transition-default: cubic-bezier(.71, .23, .32, .99);
+
+.nameplate__title,
+.nameplate__nav,
+.link1,
+.link2,
+.link3,
+.link4,
+.content {
+  opacity: 0;
+}
+
+.nameplate__title {
+  animation: fade-in 375ms $transition-default 250ms forwards;
+}
+
+.nameplate__nav {
+  animation: fade-in 100ms $transition-default 625ms forwards;
+}
+
+$link-delay: 725ms;
+
+@for $i from 1 through 4 {
+  .link#{$i} {
+    animation: fade-in 400ms $transition-default $link-delay forwards;
+  }
+
+  $link-delay: $link-delay + 400;
+}
+
+.content {
+  animation: fade-in 375ms $transition-default 2500ms forwards;
+}
+
+
+///
+/// THE SICKEST LINK UNDERLINE ANIMATION KNOWN TO MAN
+/// I AM A /LEGEND/ -T
+
+a {
+  transition: color 750ms $transition-default;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 99%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    background: $color-text;
+    transition: background 750ms $transition-default;
+    animation-timing-function: step-end;
+  }
+
+  &::before {
+    width: 0;
+    left: 1%;
+  }
+
+  &::after {
+    width: 99%;
+    right: 0;
+  }
+
+  &:hover {
+    color: $color-accent;
+    transition: color 375ms $transition-default;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background: $color-accent;
+    transition: background 250ms $transition-default;
+  }
+
+  &:hover::before {
+    animation: marquee 1500ms $transition-default 50ms infinite;
+  }
+
+  &:hover::after {
+    animation: marquee-reverse 1500ms $transition-default 50ms infinite;
+  }
+}

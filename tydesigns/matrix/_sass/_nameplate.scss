@@ -1,0 +1,27 @@
+/// =====
+/// nameplate
+/// @for nameplate things
+/// =====
+
+.nameplate {
+  margin-bottom: 2.5rem;
+  flex-flow: column nowrap;
+
+  @media (min-width: 520px) {
+    margin-bottom: 3.75rem;
+  }
+
+  @media (min-width: 980px) {
+    margin-bottom: 0;
+    margin-right: 3.75rem;
+  }
+}
+
+.nameplate__text--highlight,
+.nameplate__text--regular {
+  @include glitch-text('glitch', 10, $color-text, $color-bg,  #33ffff, #3300ff, 200, 50);
+}
+
+.nameplate__text--highlight {
+  color: $color-accent;
+}

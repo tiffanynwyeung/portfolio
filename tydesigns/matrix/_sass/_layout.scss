@@ -1,0 +1,85 @@
+/// =====
+/// layout
+/// @for site layout
+/// =====
+
+main {
+  width: 100%;
+  height: auto;
+  margin: 10% auto 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-height: 320px) {
+    height: 92.5vh;
+    margin: 0;
+  }
+
+  @media (min-width: 980px) {
+    flex-flow: row nowrap;
+  }
+}
+
+section {
+  width: 18.75rem;
+  display: flex;
+
+  @media (min-width: 520px) {
+    width: 25rem;
+  }
+
+  @media (min-width: 980px) {
+    flex: 0 0 400px;
+  }
+}
+
+nav {
+  display: block;
+  width: 99%;
+  margin: 2% auto 0 auto;
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  font-size: 1rem;
+  text-transform: lowercase;
+
+  @media (min-width: 520px) {
+    font-size: 1.25rem;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+
+  p {
+    width: 50%;
+    font-size: 0.625rem;
+    line-height: 1;
+    color: rgba($color-text, 0.5);
+
+    a {
+      color: rgba($color-text, 0.5);
+
+      &::before,
+      &::after {
+        background: rgba($color-text, 0.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/// =====
+/// typography
+/// @for default text styles
+/// =====
+
+p {
+  margin: 0 auto;
+
+  @media (min-width: 520px) {
+    font-size: 1.25rem;
+  }
+}
+
+a {
+  position: relative;
+  font-weight: bold;
+  color: $color-text;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font: 400 2.61rem/1 $font;
+  text-transform: lowercase;
+
+  @media (min-width: 520px) {
+    font-size: 348%;
+  }
+}
